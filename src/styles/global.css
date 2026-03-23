@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  --font-space-grotesk: "Space Grotesk";
+  --font-inter: "Inter";
+  --font-jetbrains-mono: "JetBrains Mono";
+
+  --color-primary: #3fff8b;
+  --color-secondary: #00affe;
+  --color-tertiary: #d79de1;
+
+  --color-neutral: #0c1016;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+.nav-link {
+  @apply opacity-50 hover:opacity-100 transition-opacity text-sm inline-block px-5 py-2 rounded-md;
+}
