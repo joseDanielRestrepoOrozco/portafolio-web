@@ -1,15 +1,40 @@
-<section class="relative">
-  <div class="z-2 mx-auto">
-    <h1>Construyendo el futuro, una linea a la vez</h1>
-    <p>
+---
+import GitHubIcon from "@/components/GitHubIcon.astro";
+import LinkedInIcon from "@/components/LinkedInIcon.astro";
+---
+
+<section class="relative isolate flex overflow-hidden bg-neutral">
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 z-[-1] scale-110 bg-linear-to-br from-primary/15 via-neutral via-50% to-secondary/15 opacity-80 blur-3xl"
+  ></div>
+  <div class="mx-auto">
+    <h1 class="text-7xl font-space-grotesk font-bold">
+      Construyendo el <span class="text-primary">Futuro</span>, una linea a la vez.
+    </h1>
+    <p class="font-inter text-xl text-gray-400">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id nam qui
       quisquam et eius doloribus, atque, eos soluta repudiandae corporis
       quibusdam saepe sunt vitae iure laboriosam amet suscipit doloremque
       facere.
     </p>
+    <div class="flex my-5 space-x-4 [&>a]:inline-block">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <GitHubIcon
+          classStyles="h-8 w-8 transition hover:scale-130 hover:text-primary duration-300"
+        />
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <LinkedInIcon
+          classStyles="h-8 w-8 transition hover:scale-130 hover:text-primary duration-300"
+        />
+      </a>
+    </div>
   </div>
-</section>
-<!-- <style>
+  <aside class="hidden md:block">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, sint. In neque animi reprehenderit deleniti magni iste expedita consequatur cumque labore, officia doloremque sint voluptates nemo id possimus dolores quibusdam.</p>
+  </aside>
+  <!-- <style>
   section::before {
     content: "";
     position: absolute;
@@ -30,3 +55,4 @@
     background: blue;
   }
 </style> -->
+</section>
