@@ -1,0 +1,17 @@
+export enum Techs {
+  React = "React",
+  NextJS = "Next.js",
+  TypeScript = "TypeScript",
+  JavaScript = "JavaScript",
+  HTML = "HTML",
+  CSS = "CSS",
+  TailwindCSS = "Tailwind CSS",
+  NodeJS = "Node.js",
+  ExpressJS = "Express.js",
+  MongoDB = "MongoDB",
+  PostgreSQL = "PostgreSQL",
+  GraphQL = "GraphQL",
+  ApolloClient = "Apollo Client",
+  Git = "Git",
+  Docker = "Docker",
+}

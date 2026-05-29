@@ -3,14 +3,13 @@ import GitHubIcon from "@/components/GitHubIcon.astro";
 import LinkedInIcon from "@/components/LinkedInIcon.astro";
 ---
 
-<section class="relative isolate flex overflow-hidden bg-neutral">
-  <div
-    aria-hidden="true"
-    class="pointer-events-none absolute inset-0 z-[-1] scale-110 bg-linear-to-br from-primary/15 via-neutral via-50% to-secondary/15 opacity-80 blur-3xl"
-  ></div>
+<section
+  class="relative container mx-auto isolate flex overflow-hidden bg-neutral"
+>
   <div class="mx-auto">
     <h1 class="text-7xl font-space-grotesk font-bold">
-      Construyendo el <span class="text-primary">Futuro</span>, una linea a la vez.
+      Construyendo el <span class="text-primary">Futuro</span>, una linea a la
+      vez.
     </h1>
     <p class="font-inter text-xl text-gray-400">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id nam qui
@@ -32,27 +31,10 @@ import LinkedInIcon from "@/components/LinkedInIcon.astro";
     </div>
   </div>
   <aside class="hidden md:block">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, sint. In neque animi reprehenderit deleniti magni iste expedita consequatur cumque labore, officia doloremque sint voluptates nemo id possimus dolores quibusdam.</p>
+    <img
+      src="/images/foto.jpeg"
+      alt="Foto de perfil"
+      class="h-64 w-64 object-cover"
+    />
   </aside>
-  <!-- <style>
-  section::before {
-    content: "";
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    z-index: 1;
-    background: red;
-  }
-
-  section::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 100px;
-    width: 100px;
-    z-index: 1;
-    background: blue;
-  }
-</style> -->
 </section>
