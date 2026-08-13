@@ -1,30 +1,47 @@
-<header class="bg-[#050916] h-20 flex items-center sticky top-0 z-20">
+---
+import styles from "./Header.module.css";
+
+const vanLinks = [
+  { name: "Proyectos", href: "#projects" },
+  { name: "Habilidades", href: "#skills" },
+  { name: "Acerca de mí", href: "#aboutMe" },
+  { name: "Contacto", href: "#contact" },
+];
+---
+
+<header
+  class={`h-20 flex items-center fixed w-full ${styles["header-animation"]}`}
+>
   <div class="container flex items-center mx-auto px-5 md:px-0">
     <div class="flex grow basis-0">
-      <a href="#" class="text-xl font-space-grotesk font-bold text-primary"
-        >JOSEDEV.V1
+      <a
+        href="#"
+        class={`text-xl font-space-grotesk font-bold ${styles["header-brand"]}`}
+      >
+        JOSEDEV.V1
       </a>
     </div>
     <nav class="font-space-grotesk font-light">
       <ul class="flex text-sm">
-        <li>
-          <a href="#projects" class="nav-link">Proyectos</a>
-        </li>
-        <li>
-          <a href="#skills" class="nav-link">Habilidades</a>
-        </li>
-        <li>
-          <a href="#about" class="nav-link">Acerca de mi</a>
-        </li>
-        <li>
-          <a href="#contact" class="nav-link">Contacto</a>
-        </li>
+        {
+          vanLinks.map((link) => (
+            <li class="ml-8">
+              <a
+                href={link.href}
+                class="transition hover:text-primary duration-300"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
     <div class="flex grow justify-end basis-0">
       <button
-        class="bg-primary w-28 h-10 rounded-md font-inter font-semibold text-[#004820] cursor-pointer text-sm"
-        >CV
+        class={`w-28 h-10 rounded-md font-inter font-semibold cursor-pointer text-sm ${styles["header-button"]}`}
+      >
+        CV
       </button>
     </div>
   </div>

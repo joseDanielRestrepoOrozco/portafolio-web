@@ -1,0 +1,45 @@
+.header-animation {
+  animation: enhance-header linear both;
+}
+
+.header-brand {
+  animation: enhance-brand linear both;
+}
+
+.header-button {
+  animation: header-button linear both;
+}
+
+.header-brand,
+.header-button,
+.header-animation {
+  animation-timeline: scroll(root);
+  animation-range: 0 80px;
+}
+
+@keyframes enhance-header {
+  to {
+    background-color: rgb(5, 9, 22);
+  }
+}
+
+@keyframes enhance-brand {
+  from {
+    color: white;
+  }
+
+  to {
+    color: var(--color-primary);
+  }
+}
+
+@keyframes header-button {
+  from {
+    background-color: white;
+    color: #00210b;
+  }
+  to {
+    color: #00210b;
+    background-color: var(--color-primary);
+  }
+}
